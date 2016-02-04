@@ -1,12 +1,11 @@
-'use strict';
-
-var ghpages = require('gh-pages');
+/* eslint no-console:0 */
+const ghpages = require("gh-pages");
 
 main();
 
-function main() {
-  ghpages.publish('./out', {
+const main = () => {
+  ghpages.publish("./out", {
     silent: false,
     logger: console.log.bind(console)
   }, console.error.bind(console));
-}
+};
