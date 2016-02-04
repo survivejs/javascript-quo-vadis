@@ -1,7 +1,7 @@
 {
-  "name": "spectacle-boilerplate",
+  "name": "javascript-quo-vadis",
   "version": "1.0.1",
-  "description": "ReactJS Powered Presentation Framework",
+  "description": "JavaScript - Quo Vadis?",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf dist",
@@ -11,7 +11,7 @@
     "copy": "rm -rf out && mkdir -p out && cp index.html out/ && cp -rf assets out/assets && cp -rf dist out/dist",
     "start": "NODE_ENV=development node server.js"
   },
-  "author": "",
+  "author": "Juho Vepsäläinen",
   "license": "MIT",
   "dependencies": {
     "normalize.css": "3.0.3",
