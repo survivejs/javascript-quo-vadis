@@ -63,7 +63,6 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-
           <Slide transition={slideTransition} bgColor="tertiary">
             <Heading caps fit size={1} textColor="primary">
               JavaScript Usage on Sites
@@ -88,22 +87,14 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={slideTransition} bgColor="primary">
-            <Heading size={1} textColor="tertiary">
-              Module Counts
+            <Heading size={1} caps fit>
+              Technologies
             </Heading>
-            <Layout>
-              <Image src={images.moduleCounts} padding="20px" />
-            </Layout>
-            <Layout>
-              <Text>
-                <Link href="http://www.modulecounts.com/">modulecounts.com</Link>
-              </Text>
-            </Layout>
           </Slide>
 
           <Slide transition={slideTransition} bgColor="primary">
             <Heading size={1} textColor="tertiary">
-              Job Trends
+              Job Trends I
             </Heading>
             <Layout>
               <Image src={images.jobs} padding="20px" />
@@ -129,6 +120,20 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
 
+          <Slide transition={slideTransition} bgColor="primary">
+            <Heading size={1} textColor="tertiary">
+              Module Counts
+            </Heading>
+            <Layout>
+              <Image src={images.moduleCounts} padding="20px" />
+            </Layout>
+            <Layout>
+              <Text>
+                <Link href="http://www.modulecounts.com/">modulecounts.com</Link>
+              </Text>
+            </Layout>
+          </Slide>
+
           <Slide transition={slideTransition} bgImage={images.shapeSorter} align="flex-end flex-end">
             <Text>
               <Link textColor="tertiary" href="https://www.flickr.com/photos/ellasdad/425813314">Andy (CC BY)</Link>
@@ -147,6 +152,14 @@ export default class Presentation extends React.Component {
             </Text>
           </Slide>
 
+          <Slide transition={slideTransition} bgColor="primary">
+            <Heading size={1} caps fit>
+              Language
+            </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition} bgImage={images.babel} />
+
           <Slide transition={slideTransition} bgImage={images.flow} align="flex-end flex-end">
             <Text>
               <Link textColor="tertiary" href="https://pixabay.com/en/honey-sweet-syrup-organic-golden-1006972/">stevepb (PD)</Link>
@@ -158,8 +171,6 @@ export default class Presentation extends React.Component {
               <Link textColor="tertiary" href="https://pixabay.com/en/typewriter-book-notebook-paper-801921/">Unsplash (PD)</Link>
             </Text>
           </Slide>
-
-          <Slide transition={slideTransition} bgImage={images.babel} />
 
           <Slide transition={slideTransition} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
             <CodePane
