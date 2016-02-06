@@ -31,6 +31,8 @@ require("spectacle/lib/themes/default/index.css");
 const slideTransition = ["spin", "zoom"];
 const images = {
   city: require("../assets/city.jpg").replace("/", ""),
+  jobs: require("../assets/jobs.png").replace("/", ""),
+  jobTitles: require("../assets/job_titles.png").replace("/", ""),
   legos: require("../assets/legos.jpg").replace("/", ""),
   moduleCounts: require("../assets/module_counts.png").replace("/", ""),
   redmonk: require("../assets/redmonk.png").replace("/", ""),
@@ -92,6 +94,34 @@ export default class Presentation extends React.Component {
             <Layout>
               <Text>
                 <Link href="http://www.modulecounts.com/">modulecounts.com</Link>
+              </Text>
+            </Layout>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="primary">
+            <Heading size={1} textColor="tertiary">
+              Job Trends
+            </Heading>
+            <Layout>
+              <Image src={images.jobs} padding="20px" />
+            </Layout>
+            <Layout>
+              <Text>
+                <Link href="http://www.indeed.com/jobtrends?q=Angularjs%2C+React.js%2C+Knockout%2C+Backbone.js&l=">Indeed</Link>
+              </Text>
+            </Layout>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="primary">
+            <Heading size={1} textColor="tertiary">
+              Job Trends II
+            </Heading>
+            <Layout>
+              <Image src={images.jobTitles} padding="20px" />
+            </Layout>
+            <Layout>
+              <Text>
+                <Link href="http://www.indeed.com/jobtrends?q=frontend%2C+backend%2C+full+stack&l=">Indeed</Link>
               </Text>
             </Layout>
           </Slide>
