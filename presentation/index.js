@@ -30,14 +30,17 @@ require("spectacle/lib/themes/default/index.css");
 
 const slideTransition = ["spin", "zoom"];
 const images = {
+  babel: require("../assets/babel.jpg").replace("/", ""),
   city: require("../assets/city.jpg").replace("/", ""),
+  flow: require("../assets/flow.jpg").replace("/", ""),
   jobs: require("../assets/jobs.png").replace("/", ""),
   jobTitles: require("../assets/job_titles.png").replace("/", ""),
   legos: require("../assets/legos.jpg").replace("/", ""),
   moduleCounts: require("../assets/module_counts.png").replace("/", ""),
   redmonk: require("../assets/redmonk.png").replace("/", ""),
   shapeSorter: require("../assets/shape_sorter.jpg").replace("/", ""),
-  tools: require("../assets/tools.jpg").replace("/", "")
+  tools: require("../assets/tools.jpg").replace("/", ""),
+  types: require("../assets/types.jpg").replace("/", "")
 };
 
 preloader(images);
@@ -143,6 +146,20 @@ export default class Presentation extends React.Component {
               <Link textColor="tertiary" href="https://www.flickr.com/photos/17178266@N00/4334202250/">Meghana Kulkarni (CC BY-NC)</Link>
             </Text>
           </Slide>
+
+          <Slide transition={slideTransition} bgImage={images.flow} align="flex-end flex-end">
+            <Text>
+              <Link textColor="tertiary" href="https://pixabay.com/en/honey-sweet-syrup-organic-golden-1006972/">stevepb (PD)</Link>
+            </Text>
+          </Slide>
+
+          <Slide transition={slideTransition} bgImage={images.types} align="flex-end flex-end">
+            <Text>
+              <Link textColor="tertiary" href="https://pixabay.com/en/typewriter-book-notebook-paper-801921/">Unsplash (PD)</Link>
+            </Text>
+          </Slide>
+
+          <Slide transition={slideTransition} bgImage={images.babel} />
 
           <Slide transition={slideTransition} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
             <CodePane
