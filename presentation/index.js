@@ -9,11 +9,13 @@ import {
   Deck,
   Heading,
   Image,
+  Layout,
   Link,
   Markdown,
   Quote,
   Slide,
-  Spectacle
+  Spectacle,
+  Text
 } from "spectacle";
 
 // Import image preloader util
@@ -28,10 +30,12 @@ require("spectacle/lib/themes/default/index.css");
 
 const slideTransition = ["spin", "zoom"];
 const images = {
-  city: require("../assets/city.jpg"),
-  kat: require("../assets/kat.png"),
-  logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
+  city: require("../assets/city.jpg").replace("/", ""),
+  legos: require("../assets/legos.jpg").replace("/", ""),
+  moduleCounts: require("../assets/module_counts.png").replace("/", ""),
+  redmonk: require("../assets/redmonk.png").replace("/", ""),
+  shapeSorter: require("../assets/shape_sorter.jpg").replace("/", ""),
+  tools: require("../assets/tools.jpg").replace("/", "")
 };
 
 preloader(images);
@@ -54,11 +58,60 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
-            <Image src={images.kat.replace("/", "")} margin="0px auto 40px" height="293px"/>
-            <Heading size={2} caps fit textColor="primary" textFont="primary">
-              Wait what?
+
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              JavaScript Usage on Sites
             </Heading>
+            <Markdown>
+          {`
+* 2011 - 38.2%
+* 2013 - 60.4%
+* 2015 - 65.0%
+* 2016 - 71.3%
+* Source: [W3Techs](http://w3techs.com/technologies/history_overview/javascript_library/all/y)
+          `}
+            </Markdown>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="primary">
+            <Layout>
+              <Link href="http://redmonk.com/jgovernor/2015/07/31/programming-language-rankings-summer-2015/">
+                <Image src={images.redmonk} />
+              </Link>
+            </Layout>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="primary">
+            <Heading size={1} textColor="tertiary">
+              Module Counts
+            </Heading>
+            <Layout>
+              <Image src={images.moduleCounts} padding="20px" />
+            </Layout>
+            <Layout>
+              <Text>
+                <Link href="http://www.modulecounts.com/">modulecounts.com</Link>
+              </Text>
+            </Layout>
+          </Slide>
+
+          <Slide transition={slideTransition} bgImage={images.shapeSorter} align="flex-end flex-end">
+            <Text>
+              <Link textColor="tertiary" href="https://www.flickr.com/photos/ellasdad/425813314">Andy (CC BY)</Link>
+            </Text>
+          </Slide>
+
+          <Slide transition={slideTransition} bgImage={images.legos} align="flex-end flex-end">
+            <Text>
+              <Link textColor="tertiary" href="https://pixabay.com/en/lego-blocks-bricks-toy-game-252602/">estefania17 (PD)</Link>
+            </Text>
+          </Slide>
+
+          <Slide transition={slideTransition} bgImage={images.tools} align="flex-end flex-end">
+            <Text>
+              <Link textColor="tertiary" href="https://www.flickr.com/photos/17178266@N00/4334202250/">Meghana Kulkarni (CC BY-NC)</Link>
+            </Text>
           </Slide>
 
           <Slide transition={slideTransition} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
@@ -82,8 +135,6 @@ export default class Presentation extends React.Component {
             </Heading>
             <Markdown>
               {`
-![Markdown Logo](${images.markdown.replace("/", "")})
-
 You can write inline images, [Markdown Links](http://commonmark.org), paragraph text and most other markdown syntax
 * Lists too!
 * With ~~strikethrough~~ and _italic_
