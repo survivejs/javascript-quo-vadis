@@ -1,5 +1,6 @@
 {
   "name": "javascript-quo-vadis",
+  "private": true,
   "version": "1.0.1",
   "description": "JavaScript - Quo Vadis?",
   "main": "lib/index.js",
