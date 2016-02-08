@@ -32,6 +32,7 @@ const slideTransition = ["spin", "zoom"];
 const images = {
   babel: require("../assets/babel.jpg").replace("/", ""),
   city: require("../assets/city.jpg").replace("/", ""),
+  eich: require("../assets/eich.jpg").replace("/", ""),
   flow: require("../assets/flow.jpg").replace("/", ""),
   jobs: require("../assets/jobs.png").replace("/", ""),
   jobTitles: require("../assets/job_titles.png").replace("/", ""),
@@ -61,6 +62,23 @@ export default class Presentation extends React.Component {
             <Heading size={2} textColor="white">
               Quo Vadis?
             </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="black">
+            <Image src={images.eich} margin="0px auto 40px" height="400px"/>
+            <Heading size={2} caps textColor="primary" textFont="primary">
+              Brendan Eich
+            </Heading>
+            <Text>
+              <Link href="https://en.wikipedia.org/wiki/Brendan_Eich#/media/File:Brendan_Eich_Mozilla_Foundation_official_photo.jpg">Wikipedia</Link>
+            </Text>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="black">
+            <BlockQuote>
+              <Quote>{"The future is already here — it's just not very evenly distributed"}</Quote>
+              <Cite>William Gibson</Cite>
+            </BlockQuote>
           </Slide>
 
           <Slide transition={slideTransition} bgColor="tertiary">
