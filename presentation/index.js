@@ -81,6 +81,13 @@ export default class Presentation extends React.Component {
             </BlockQuote>
           </Slide>
 
+          <Slide transition={slideTransition} bgColor="black">
+            <BlockQuote>
+              <Quote>{"Communities are constrained to produce designs which are copies of the communication structures of these communities"}</Quote>
+              <Cite>Melvin Conway (adapted)</Cite>
+            </BlockQuote>
+          </Slide>
+
           <Slide transition={slideTransition} bgColor="tertiary">
             <Heading caps fit size={1} textColor="primary">
               JavaScript Usage on Sites
