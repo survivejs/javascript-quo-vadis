@@ -33,6 +33,7 @@ const images = {
   babel: require("../assets/babel.jpg").replace("/", ""),
   chain: require("../assets/chain.jpg").replace("/", ""),
   city: require("../assets/city.jpg").replace("/", ""),
+  cowboy: require("../assets/cowboy.jpg").replace("/", ""),
   eich: require("../assets/eich.jpg").replace("/", ""),
   flow: require("../assets/flow.jpg").replace("/", ""),
   jumper: require("../assets/jumper.jpg").replace("/", ""),
@@ -169,7 +170,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.jumper} bgDarken={0.25} align="flex-end flex-end">
-            <Heading size={1} caps fit>
+            <Heading size={1} caps>
               Boilerplates
             </Heading>
           </Slide>
@@ -184,7 +185,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.shapeSorter} bgDarken={0.25} align="flex-end flex-end">
-            <Heading size={1} caps fit>
+            <Heading size={1} caps>
               Frameworks
             </Heading>
             <Text>
@@ -193,7 +194,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.legos} bgDarken={0.25} align="flex-end flex-end">
-            <Heading size={1} caps fit>
+            <Heading size={1} caps>
               Libraries
             </Heading>
             <Text>
@@ -202,7 +203,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.tools} bgDarken={0.25} align="flex-end flex-end">
-            <Heading size={1} caps fit>
+            <Heading size={1} caps>
               Toolkits
             </Heading>
             <Text>
@@ -217,13 +218,28 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.babel} bgDarken={0.25} align="flex-end flex-end">
-            <Heading size={1} caps fit>
+            <Heading size={1} caps>
               Babel
             </Heading>
           </Slide>
 
-          <Slide transition={slideTransition} bgImage={images.flow} bgDarken={0.25} align="flex-end flex-end">
+          <Slide transition={slideTransition} bgColor="primary">
             <Heading size={1} caps fit>
+              Typing
+            </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition} bgImage={images.cowboy} bgDarken={0.25} align="flex-end flex-end">
+            <Heading size={1} caps>
+              Cowboy
+            </Heading>
+            <Text>
+              <Link textColor="tertiary" href="https://pixabay.com/en/cowboy-horse-dog-pasture-western-1130695/">elijay (PD)</Link>
+            </Text>
+          </Slide>
+
+          <Slide transition={slideTransition} bgImage={images.flow} bgDarken={0.25} align="flex-end flex-end">
+            <Heading size={1} caps>
               Flow
             </Heading>
             <Text>
@@ -232,7 +248,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.types} bgDarken={0.25} align="flex-end flex-end">
-            <Heading size={1} caps fit>
+            <Heading size={1} caps>
               TypeScript
             </Heading>
             <Text>
