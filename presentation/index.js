@@ -30,6 +30,7 @@ require("spectacle/lib/themes/default/index.css");
 
 const slideTransition = ["spin", "zoom"];
 const images = {
+  assembly: require("../assets/assembly.jpg").replace("/", ""),
   babel: require("../assets/babel.jpg").replace("/", ""),
   chain: require("../assets/chain.jpg").replace("/", ""),
   city: require("../assets/city.jpg").replace("/", ""),
@@ -253,6 +254,21 @@ export default class Presentation extends React.Component {
             </Heading>
             <Text>
               <Link textColor="tertiary" href="https://pixabay.com/en/typewriter-book-notebook-paper-801921/">Unsplash (PD)</Link>
+            </Text>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="primary">
+            <Heading size={1} caps fit>
+              The Future
+            </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition} bgImage={images.assembly} bgDarken={0.25} align="flex-end flex-end">
+            <Heading size={1} caps>
+              WebAssembly
+            </Heading>
+            <Text>
+              <Link textColor="tertiary" href="https://pixabay.com/en/wheels-machine-installation-art-784865/">Efraimstochter (PD)</Link>
             </Text>
           </Slide>
 
