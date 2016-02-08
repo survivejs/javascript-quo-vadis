@@ -31,9 +31,11 @@ require("spectacle/lib/themes/default/index.css");
 const slideTransition = ["spin", "zoom"];
 const images = {
   babel: require("../assets/babel.jpg").replace("/", ""),
+  chain: require("../assets/chain.jpg").replace("/", ""),
   city: require("../assets/city.jpg").replace("/", ""),
   eich: require("../assets/eich.jpg").replace("/", ""),
   flow: require("../assets/flow.jpg").replace("/", ""),
+  jumper: require("../assets/jumper.jpg").replace("/", ""),
   jobs: require("../assets/jobs.png").replace("/", ""),
   jobTitles: require("../assets/job_titles.png").replace("/", ""),
   legos: require("../assets/legos.jpg").replace("/", ""),
@@ -166,19 +168,43 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
 
-          <Slide transition={slideTransition} bgImage={images.shapeSorter} align="flex-end flex-end">
+          <Slide transition={slideTransition} bgImage={images.jumper} bgDarken={0.25} align="flex-end flex-end">
+            <Heading size={1} caps fit>
+              Boilerplates
+            </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition} bgImage={images.chain} bgDarken={0.25} align="flex-end flex-end">
+            <Heading size={1} caps fit>
+              Dependency chains
+            </Heading>
+            <Text>
+              <Link textColor="tertiary" href="https://pixabay.com/en/chain-links-connection-strength-690966/">Unsplash (PD)</Link>
+            </Text>
+          </Slide>
+
+          <Slide transition={slideTransition} bgImage={images.shapeSorter} bgDarken={0.25} align="flex-end flex-end">
+            <Heading size={1} caps fit>
+              Frameworks
+            </Heading>
             <Text>
               <Link textColor="tertiary" href="https://www.flickr.com/photos/ellasdad/425813314">Andy (CC BY)</Link>
             </Text>
           </Slide>
 
-          <Slide transition={slideTransition} bgImage={images.legos} align="flex-end flex-end">
+          <Slide transition={slideTransition} bgImage={images.legos} bgDarken={0.25} align="flex-end flex-end">
+            <Heading size={1} caps fit>
+              Libraries
+            </Heading>
             <Text>
               <Link textColor="tertiary" href="https://pixabay.com/en/lego-blocks-bricks-toy-game-252602/">estefania17 (PD)</Link>
             </Text>
           </Slide>
 
-          <Slide transition={slideTransition} bgImage={images.tools} align="flex-end flex-end">
+          <Slide transition={slideTransition} bgImage={images.tools} bgDarken={0.25} align="flex-end flex-end">
+            <Heading size={1} caps fit>
+              Toolkits
+            </Heading>
             <Text>
               <Link textColor="tertiary" href="https://www.flickr.com/photos/17178266@N00/4334202250/">Meghana Kulkarni (CC BY-NC)</Link>
             </Text>
@@ -190,15 +216,25 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-          <Slide transition={slideTransition} bgImage={images.babel} />
+          <Slide transition={slideTransition} bgImage={images.babel} bgDarken={0.25} align="flex-end flex-end">
+            <Heading size={1} caps fit>
+              Babel
+            </Heading>
+          </Slide>
 
-          <Slide transition={slideTransition} bgImage={images.flow} align="flex-end flex-end">
+          <Slide transition={slideTransition} bgImage={images.flow} bgDarken={0.25} align="flex-end flex-end">
+            <Heading size={1} caps fit>
+              Flow
+            </Heading>
             <Text>
               <Link textColor="tertiary" href="https://pixabay.com/en/honey-sweet-syrup-organic-golden-1006972/">stevepb (PD)</Link>
             </Text>
           </Slide>
 
-          <Slide transition={slideTransition} bgImage={images.types} align="flex-end flex-end">
+          <Slide transition={slideTransition} bgImage={images.types} bgDarken={0.25} align="flex-end flex-end">
+            <Heading size={1} caps fit>
+              TypeScript
+            </Heading>
             <Text>
               <Link textColor="tertiary" href="https://pixabay.com/en/typewriter-book-notebook-paper-801921/">Unsplash (PD)</Link>
             </Text>
@@ -210,13 +246,6 @@ export default class Presentation extends React.Component {
               source={require("raw!../assets/deck.example")}
               margin="20px auto"
             />
-          </Slide>
-
-          <Slide transition={slideTransition} bgColor="black">
-            <BlockQuote>
-              <Quote>Wonderfully formatted quotes</Quote>
-              <Cite>Ken Wheeler</Cite>
-            </BlockQuote>
           </Slide>
 
           <Slide transition={slideTransition} bgColor="tertiary">
