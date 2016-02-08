@@ -37,6 +37,7 @@ const images = {
   jobs: require("../assets/jobs.png").replace("/", ""),
   jobTitles: require("../assets/job_titles.png").replace("/", ""),
   legos: require("../assets/legos.jpg").replace("/", ""),
+  npmShape: require("../assets/npm_shape.png").replace("/", ""),
   moduleCounts: require("../assets/module_counts.png").replace("/", ""),
   redmonk: require("../assets/redmonk.png").replace("/", ""),
   shapeSorter: require("../assets/shape_sorter.jpg").replace("/", ""),
@@ -86,6 +87,12 @@ export default class Presentation extends React.Component {
               <Quote>{"Communities are constrained to produce designs which are copies of the communication structures of these communities"}</Quote>
               <Cite>Melvin Conway (adapted)</Cite>
             </BlockQuote>
+          </Slide>
+
+          <Slide transition={slideTransition} bgImage={images.npmShape} align="flex-end flex-end">
+            <Text>
+              <Link textColor="tertiary" href="https://anvaka.github.io/allnpmviz3d/">allnpmviz3d by @anvaka</Link>
+            </Text>
           </Slide>
 
           <Slide transition={slideTransition} bgColor="tertiary">
