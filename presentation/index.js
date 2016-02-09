@@ -170,7 +170,7 @@ export default class Presentation extends React.Component {
               Packages of all shapes and sizes
             </Heading>
             <Text>
-              <Link href="https://en.wikipedia.org/wiki/File:Largestdinosaursbysuborder_scale.png">Wikipedia (CC BY-SA)</Link>
+              <Link textColor="tertiary" href="https://en.wikipedia.org/wiki/File:Largestdinosaursbysuborder_scale.png">Wikipedia (CC BY-SA)</Link>
             </Text>
           </Slide>
 
