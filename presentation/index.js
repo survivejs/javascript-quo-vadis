@@ -77,9 +77,6 @@ export default class Presentation extends React.Component {
             <Heading size={2} caps textColor="primary" textFont="primary">
               Brendan Eich
             </Heading>
-            <Text>
-              <Link textColor="tertiary" href="https://en.wikipedia.org/wiki/Brendan_Eich#/media/File:Brendan_Eich_Mozilla_Foundation_official_photo.jpg">Wikipedia (CC BY-SA)</Link>
-            </Text>
           </Slide>
 
           <Slide transition={slideTransition} bgColor="black">
@@ -172,9 +169,6 @@ export default class Presentation extends React.Component {
             <Heading size={2} caps textColor="primary" textFont="primary">
               Packages of all shapes and sizes
             </Heading>
-            <Text>
-              <Link textColor="tertiary" href="https://en.wikipedia.org/wiki/File:Largestdinosaursbysuborder_scale.png">Wikipedia (CC BY-SA)</Link>
-            </Text>
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.jumper} bgDarken={0.75} bgColor="black">
@@ -186,36 +180,24 @@ export default class Presentation extends React.Component {
           <Slide transition={slideTransition} bgImage={images.shapeSorter} bgDarken={0.75} bgColor="black">
             <BlockQuote>
               <Quote>12263 results for ‘framework’</Quote>
-              <Cite>
-                <Link textColor="tertiary" href="https://www.flickr.com/photos/ellasdad/425813314">Andy (CC BY)</Link>
-              </Cite>
             </BlockQuote>
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.tools} bgDarken={0.75}>
             <BlockQuote>
               <Quote>1067 results for ‘toolkit’</Quote>
-              <Cite>
-                <Link textColor="tertiary" href="https://www.flickr.com/photos/17178266@N00/4334202250/">Meghana Kulkarni (CC BY-NC)</Link>
-              </Cite>
             </BlockQuote>
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.legos} bgDarken={0.75}>
             <BlockQuote>
               <Quote>30187 results for ‘library’</Quote>
-              <Cite>
-                <Link textColor="tertiary" href="https://pixabay.com/en/lego-blocks-bricks-toy-game-252602/">estefania17 (PD)</Link>
-              </Cite>
             </BlockQuote>
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.components} bgDarken={0.75}>
             <BlockQuote>
               <Quote>13711 results for ‘component’</Quote>
-              <Cite>
-                <Link textColor="tertiary" href="https://commons.wikimedia.org/wiki/File:Componentes.JPG">Kae (PD)</Link>
-              </Cite>
             </BlockQuote>
           </Slide>
 
@@ -227,9 +209,6 @@ export default class Presentation extends React.Component {
             <Heading size={1} caps fit>
               Dependencies
             </Heading>
-            <Text>
-              <Link textColor="tertiary" href="https://anvaka.github.io/allnpmviz3d/">allnpmviz3d by @anvaka</Link>
-            </Text>
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.babel} bgDarken={0.75} bgColor="tertiary" textColor="primary">
@@ -250,9 +229,6 @@ export default class Presentation extends React.Component {
             <BlockQuote>
               <Quote>{"Array(16).join('hero' - 1) + 'Batman';"}</Quote>
             </BlockQuote>
-            <Text>
-              <Link textColor="tertiary" href="https://pixabay.com/en/cowboy-horse-dog-pasture-western-1130695/">elijay (PD)</Link>
-            </Text>
           </Slide>
 
           <Slide transition={slideTransition} bgColor="black">
@@ -260,36 +236,24 @@ export default class Presentation extends React.Component {
             <Heading size={2} caps textColor="primary" textFont="primary">
               JavaScript Goes Enterprise
             </Heading>
-            <Text>
-              <Link textColor="tertiary" href="https://pixabay.com/en/leonard-nimoy-william-shatner-393861/">skeeze (PD)</Link>
-            </Text>
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.flow} bgDarken={0.25}>
             <Heading size={1} caps>
               Flowtype
             </Heading>
-            <Text>
-              <Link textColor="tertiary" href="https://pixabay.com/en/honey-sweet-syrup-organic-golden-1006972/">stevepb (PD)</Link>
-            </Text>
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.types} bgDarken={0.25}>
             <Heading size={1} caps>
               TypeScript
             </Heading>
-            <Text>
-              <Link textColor="tertiary" href="https://pixabay.com/en/typewriter-book-notebook-paper-801921/">Unsplash (PD)</Link>
-            </Text>
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.assembly} bgDarken={0.25}>
             <Heading size={1} caps>
               WebAssembly
             </Heading>
-            <Text>
-              <Link textColor="tertiary" href="https://pixabay.com/en/wheels-machine-installation-art-784865/">Efraimstochter (PD)</Link>
-            </Text>
           </Slide>
 
           <Slide transition={slideTransition} bgColor="black">
@@ -321,6 +285,22 @@ export default class Presentation extends React.Component {
                 Juho Vepsäläinen
               </Heading>
             </Link>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="tertiary" textColor="primary">
+            <Heading caps fit size={1} textColor="primary">
+              Image Credits
+            </Heading>
+            <Markdown>
+              {`
+* [Wikipedia (CC BY-SA)](https://en.wikipedia.org/wiki/Brendan_Eich#/media/File:Brendan_Eich_Mozilla_Foundation_official_photo.jpg), [Wikipedia (CC BY-SA)](https://en.wikipedia.org/wiki/File:Largestdinosaursbysuborder_scale.png)
+* [Andy (CC BY)](https://www.flickr.com/photos/ellasdad/425813314), [Meghana Kulkarni (CC BY-NC)](https://www.flickr.com/photos/17178266@N00/4334202250/)
+* [estefania17 (PD)](https://pixabay.com/en/lego-blocks-bricks-toy-game-252602/), [Kae (PD)](https://commons.wikimedia.org/wiki/File:Componentes.JPG)
+* [allnpmviz3d by @anvaka](https://anvaka.github.io/allnpmviz3d/), [elijay (PD)](https://pixabay.com/en/cowboy-horse-dog-pasture-western-1130695/)
+* [skeeze (PD)](https://pixabay.com/en/leonard-nimoy-william-shatner-393861/), [stevepb (PD)](https://pixabay.com/en/honey-sweet-syrup-organic-golden-1006972/)
+* [Unsplash (PD)](https://pixabay.com/en/typewriter-book-notebook-paper-801921/), [Efraimstochter (PD)](https://pixabay.com/en/wheels-machine-installation-art-784865/)
+              `}
+            </Markdown>
           </Slide>
         </Deck>
       </Spectacle>
