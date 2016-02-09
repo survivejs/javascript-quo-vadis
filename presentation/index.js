@@ -30,10 +30,8 @@ require("spectacle/lib/themes/default/index.css");
 
 const slideTransition = ["spin", "zoom"];
 const images = {
-  amoeba: require("../assets/amoeba.jpg").replace("/", ""),
   assembly: require("../assets/assembly.jpg").replace("/", ""),
   babel: require("../assets/babel.jpg").replace("/", ""),
-  chain: require("../assets/chain.jpg").replace("/", ""),
   city: require("../assets/city.jpg").replace("/", ""),
   cowboy: require("../assets/cowboy.jpg").replace("/", ""),
   dinosaurs: require("../assets/dinosaurs.png").replace("/", ""),
@@ -47,7 +45,8 @@ const images = {
   redmonk: require("../assets/redmonk.png").replace("/", ""),
   shapeSorter: require("../assets/shape_sorter.jpg").replace("/", ""),
   tools: require("../assets/tools.jpg").replace("/", ""),
-  types: require("../assets/types.jpg").replace("/", "")
+  types: require("../assets/types.jpg").replace("/", ""),
+  unique: require("../assets/unique.png").replace("/", "")
 };
 
 preloader(images);
@@ -80,16 +79,7 @@ export default class Presentation extends React.Component {
             </Text>
           </Slide>
 
-          <Slide transition={slideTransition} bgImage={images.amoeba} bgDarken={0.75} bgColor="black">
-            <BlockQuote>
-              <Quote>{"Array(16).join('hero' - 1) + 'Batman';"}</Quote>
-            </BlockQuote>
-            <Text>
-              <Link textColor="tertiary" href="https://commons.wikimedia.org/wiki/File:Amoeba_(Am%C3%B6be)_01.jpg">Wikipedia (CC BY)</Link>
-            </Text>
-          </Slide>
-
-          <Slide transition={slideTransition} bgImage={images.amoeba} bgDarken={0.75} bgColor="black">
+          <Slide transition={slideTransition} bgColor="black">
             <BlockQuote>
               <Quote>2016 - 71.3% of sites use JavaScript</Quote>
               <Cite>
@@ -134,17 +124,8 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
 
-          <Slide transition={slideTransition} bgImage={images.npmShape} align="flex-end flex-end">
-            <Text>
-              <Link textColor="tertiary" href="https://anvaka.github.io/allnpmviz3d/">allnpmviz3d by @anvaka</Link>
-            </Text>
-          </Slide>
-
           <Slide transition={slideTransition} bgColor="black">
-            <BlockQuote>
-              <Quote>{"Communities are constrained to produce designs which are copies of the communication structures of these communities"}</Quote>
-              <Cite>Melvin Conway (adapted)</Cite>
-            </BlockQuote>
+            <Image src={images.unique} margin="0px auto 40px" width="100%"/>
           </Slide>
 
           <Slide transition={slideTransition} bgColor="black">
@@ -158,14 +139,14 @@ export default class Presentation extends React.Component {
 
           <Slide transition={slideTransition} bgColor="black">
             <BlockQuote>
-              <Quote>138k packages out of 231k packages have readme, license, and repository data</Quote>
+              <Quote>138k packages out of 231k have readme, license, and repository data</Quote>
               <Cite>@scriptjs</Cite>
             </BlockQuote>
           </Slide>
 
           <Slide transition={slideTransition} bgColor="black">
             <BlockQuote>
-              <Quote>106k packages out of these 138k packages have seen action within a year</Quote>
+              <Quote>106k packages out of these 138k have seen action within a year</Quote>
               <Cite>@scriptjs</Cite>
             </BlockQuote>
           </Slide>
@@ -173,6 +154,13 @@ export default class Presentation extends React.Component {
           <Slide transition={slideTransition} bgColor="black">
             <BlockQuote>
               <Quote>Around 30-40k packages worth using?</Quote>
+            </BlockQuote>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="black">
+            <BlockQuote>
+              <Quote>{"Communities are constrained to produce designs which are copies of the communication structures of these communities"}</Quote>
+              <Cite>Melvin Conway (adapted)</Cite>
             </BlockQuote>
           </Slide>
 
@@ -186,64 +174,68 @@ export default class Presentation extends React.Component {
             </Text>
           </Slide>
 
-          <Slide transition={slideTransition} bgImage={images.jumper} bgDarken={0.25} align="flex-end flex-end">
-            <Heading size={1} caps>
-              Boilerplates
-            </Heading>
+          <Slide transition={slideTransition} bgImage={images.jumper} bgDarken={0.75} bgColor="black">
+            <BlockQuote>
+              <Quote>2669 results for ‘boilerplate’</Quote>
+            </BlockQuote>
           </Slide>
 
-          <Slide transition={slideTransition} bgImage={images.shapeSorter} bgDarken={0.25} align="flex-end flex-end">
-            <Heading size={1} caps>
-              Frameworks
-            </Heading>
-            <Text>
-              <Link textColor="tertiary" href="https://www.flickr.com/photos/ellasdad/425813314">Andy (CC BY)</Link>
-            </Text>
+          <Slide transition={slideTransition} bgImage={images.shapeSorter} bgDarken={0.75} bgColor="black">
+            <BlockQuote>
+              <Quote>12263 results for ‘framework’</Quote>
+              <Cite>
+                <Link textColor="tertiary" href="https://www.flickr.com/photos/ellasdad/425813314">Andy (CC BY)</Link>
+              </Cite>
+            </BlockQuote>
           </Slide>
 
-          <Slide transition={slideTransition} bgImage={images.legos} bgDarken={0.25} align="flex-end flex-end">
-            <Heading size={1} caps>
-              Libraries
-            </Heading>
-            <Text>
-              <Link textColor="tertiary" href="https://pixabay.com/en/lego-blocks-bricks-toy-game-252602/">estefania17 (PD)</Link>
-            </Text>
+          <Slide transition={slideTransition} bgImage={images.tools} bgDarken={0.75}>
+            <BlockQuote>
+              <Quote>1067 results for ‘toolkit’</Quote>
+              <Cite>
+                <Link textColor="tertiary" href="https://www.flickr.com/photos/17178266@N00/4334202250/">Meghana Kulkarni (CC BY-NC)</Link>
+              </Cite>
+            </BlockQuote>
           </Slide>
 
-          <Slide transition={slideTransition} bgImage={images.tools} bgDarken={0.25} align="flex-end flex-end">
-            <Heading size={1} caps>
-              Toolkits
-            </Heading>
-            <Text>
-              <Link textColor="tertiary" href="https://www.flickr.com/photos/17178266@N00/4334202250/">Meghana Kulkarni (CC BY-NC)</Link>
-            </Text>
+          <Slide transition={slideTransition} bgImage={images.legos} bgDarken={0.75}>
+            <BlockQuote>
+              <Quote>30187 results for ‘library’</Quote>
+              <Cite>
+                <Link textColor="tertiary" href="https://pixabay.com/en/lego-blocks-bricks-toy-game-252602/">estefania17 (PD)</Link>
+              </Cite>
+            </BlockQuote>
           </Slide>
 
-          <Slide transition={slideTransition} bgImage={images.chain} bgDarken={0.25} align="flex-end flex-end">
+          <Slide transition={slideTransition} bgImage={images.tools} bgDarken={0.25}>
+            <iframe width="840" height="630" src="https://www.youtube.com/embed/Y7XW-mewUm8" frameborder="0" allowfullscreen></iframe>
+          </Slide>
+
+          <Slide transition={slideTransition} bgImage={images.npmShape} align="flex-end flex-end">
             <Heading size={1} caps fit>
               Dependencies
             </Heading>
             <Text>
-              <Link textColor="tertiary" href="https://pixabay.com/en/chain-links-connection-strength-690966/">Unsplash (PD)</Link>
+              <Link textColor="tertiary" href="https://anvaka.github.io/allnpmviz3d/">allnpmviz3d by @anvaka</Link>
             </Text>
           </Slide>
 
-          <Slide transition={slideTransition} bgImage={images.babel} bgDarken={0.25} align="flex-end flex-end">
+          <Slide transition={slideTransition} bgImage={images.babel} bgDarken={0.25}>
             <Heading size={1} caps>
               Babel
             </Heading>
           </Slide>
 
-          <Slide transition={slideTransition} bgImage={images.cowboy} bgDarken={0.25} align="flex-end flex-end">
-            <Heading size={1} caps>
-              Typing
-            </Heading>
+          <Slide transition={slideTransition} bgImage={images.cowboy} bgDarken={0.75} bgColor="black">
+            <BlockQuote>
+              <Quote>{"Array(16).join('hero' - 1) + 'Batman';"}</Quote>
+            </BlockQuote>
             <Text>
               <Link textColor="tertiary" href="https://pixabay.com/en/cowboy-horse-dog-pasture-western-1130695/">elijay (PD)</Link>
             </Text>
           </Slide>
 
-          <Slide transition={slideTransition} bgImage={images.flow} bgDarken={0.25} align="flex-end flex-end">
+          <Slide transition={slideTransition} bgImage={images.flow} bgDarken={0.25}>
             <Heading size={1} caps>
               Flowtype
             </Heading>
@@ -252,7 +244,7 @@ export default class Presentation extends React.Component {
             </Text>
           </Slide>
 
-          <Slide transition={slideTransition} bgImage={images.types} bgDarken={0.25} align="flex-end flex-end">
+          <Slide transition={slideTransition} bgImage={images.types} bgDarken={0.25}>
             <Heading size={1} caps>
               TypeScript
             </Heading>
@@ -261,7 +253,7 @@ export default class Presentation extends React.Component {
             </Text>
           </Slide>
 
-          <Slide transition={slideTransition} bgImage={images.assembly} bgDarken={0.25} align="flex-end flex-end">
+          <Slide transition={slideTransition} bgImage={images.assembly} bgDarken={0.25}>
             <Heading size={1} caps>
               WebAssembly
             </Heading>
