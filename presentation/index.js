@@ -33,9 +33,11 @@ const images = {
   assembly: require("../assets/assembly.jpg").replace("/", ""),
   babel: require("../assets/babel.jpg").replace("/", ""),
   city: require("../assets/city.jpg").replace("/", ""),
+  components: require("../assets/components.jpg").replace("/", ""),
   cowboy: require("../assets/cowboy.jpg").replace("/", ""),
   dinosaurs: require("../assets/dinosaurs.png").replace("/", ""),
   eich: require("../assets/eich.jpg").replace("/", ""),
+  enterprise: require("../assets/enterprise.jpg").replace("/", ""),
   flow: require("../assets/flow.jpg").replace("/", ""),
   jumper: require("../assets/jumper.jpg").replace("/", ""),
   jobs: require("../assets/jobs.png").replace("/", ""),
@@ -44,6 +46,7 @@ const images = {
   moduleCounts: require("../assets/module_counts.png").replace("/", ""),
   redmonk: require("../assets/redmonk.png").replace("/", ""),
   shapeSorter: require("../assets/shape_sorter.jpg").replace("/", ""),
+  survivejs: require("../assets/survivejs.png").replace("/", ""),
   tools: require("../assets/tools.jpg").replace("/", ""),
   types: require("../assets/types.jpg").replace("/", ""),
   unique: require("../assets/unique.png").replace("/", "")
@@ -75,7 +78,7 @@ export default class Presentation extends React.Component {
               Brendan Eich
             </Heading>
             <Text>
-              <Link href="https://en.wikipedia.org/wiki/Brendan_Eich#/media/File:Brendan_Eich_Mozilla_Foundation_official_photo.jpg">Wikipedia (CC BY-SA)</Link>
+              <Link textColor="tertiary" href="https://en.wikipedia.org/wiki/Brendan_Eich#/media/File:Brendan_Eich_Mozilla_Foundation_official_photo.jpg">Wikipedia (CC BY-SA)</Link>
             </Text>
           </Slide>
 
@@ -207,6 +210,15 @@ export default class Presentation extends React.Component {
             </BlockQuote>
           </Slide>
 
+          <Slide transition={slideTransition} bgImage={images.components} bgDarken={0.75}>
+            <BlockQuote>
+              <Quote>13711 results for ‘component’</Quote>
+              <Cite>
+                <Link textColor="tertiary" href="https://commons.wikimedia.org/wiki/File:Componentes.JPG">Kae (PD)</Link>
+              </Cite>
+            </BlockQuote>
+          </Slide>
+
           <Slide transition={slideTransition} bgImage={images.tools} bgDarken={0.25}>
             <iframe width="840" height="630" src="https://www.youtube.com/embed/Y7XW-mewUm8" frameborder="0" allowfullscreen></iframe>
           </Slide>
@@ -220,10 +232,18 @@ export default class Presentation extends React.Component {
             </Text>
           </Slide>
 
-          <Slide transition={slideTransition} bgImage={images.babel} bgDarken={0.25}>
-            <Heading size={1} caps>
-              Babel
+          <Slide transition={slideTransition} bgImage={images.babel} bgDarken={0.75} bgColor="tertiary" textColor="primary">
+            <Heading caps fit size={1} textColor="primary">
+              ECMAScript
             </Heading>
+            <Markdown>
+              {`
+* ES5 - 2009
+* ES6/ES2015 - 20+ new features
+* ES7/ES2016 - **Array.prototype.include**, **\*\***
+* [Current proposals](https://github.com/tc39/ecma262)
+              `}
+            </Markdown>
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.cowboy} bgDarken={0.75} bgColor="black">
@@ -232,6 +252,16 @@ export default class Presentation extends React.Component {
             </BlockQuote>
             <Text>
               <Link textColor="tertiary" href="https://pixabay.com/en/cowboy-horse-dog-pasture-western-1130695/">elijay (PD)</Link>
+            </Text>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="black">
+            <Image src={images.enterprise} margin="0px auto 40px" height="400px"/>
+            <Heading size={2} caps textColor="primary" textFont="primary">
+              JavaScript Goes Enterprise
+            </Heading>
+            <Text>
+              <Link textColor="tertiary" href="https://pixabay.com/en/leonard-nimoy-william-shatner-393861/">skeeze (PD)</Link>
             </Text>
           </Slide>
 
@@ -273,6 +303,13 @@ export default class Presentation extends React.Component {
             <Heading caps fit size={1} textColor="tertiary">
               Questions?
             </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="white" notes="">
+            <Heading size={1} textColor="primary">
+              SurviveJS
+            </Heading>
+            <Image src={images.survivejs} margin="0px auto 40px" height="566px"/>
           </Slide>
 
           <Slide transition={slideTransition} bgColor="tertiary">
