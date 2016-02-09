@@ -30,16 +30,17 @@ require("spectacle/lib/themes/default/index.css");
 
 const slideTransition = ["spin", "zoom"];
 const images = {
+  amoeba: require("../assets/amoeba.jpg").replace("/", ""),
   assembly: require("../assets/assembly.jpg").replace("/", ""),
   babel: require("../assets/babel.jpg").replace("/", ""),
   chain: require("../assets/chain.jpg").replace("/", ""),
   city: require("../assets/city.jpg").replace("/", ""),
   cowboy: require("../assets/cowboy.jpg").replace("/", ""),
+  dinosaurs: require("../assets/dinosaurs.png").replace("/", ""),
   eich: require("../assets/eich.jpg").replace("/", ""),
   flow: require("../assets/flow.jpg").replace("/", ""),
   jumper: require("../assets/jumper.jpg").replace("/", ""),
   jobs: require("../assets/jobs.png").replace("/", ""),
-  jobTitles: require("../assets/job_titles.png").replace("/", ""),
   legos: require("../assets/legos.jpg").replace("/", ""),
   npmShape: require("../assets/npm_shape.png").replace("/", ""),
   moduleCounts: require("../assets/module_counts.png").replace("/", ""),
@@ -75,43 +76,26 @@ export default class Presentation extends React.Component {
               Brendan Eich
             </Heading>
             <Text>
-              <Link href="https://en.wikipedia.org/wiki/Brendan_Eich#/media/File:Brendan_Eich_Mozilla_Foundation_official_photo.jpg">Wikipedia</Link>
+              <Link href="https://en.wikipedia.org/wiki/Brendan_Eich#/media/File:Brendan_Eich_Mozilla_Foundation_official_photo.jpg">Wikipedia (CC BY-SA)</Link>
             </Text>
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="black">
+          <Slide transition={slideTransition} bgImage={images.amoeba} bgDarken={0.75} bgColor="black">
             <BlockQuote>
-              <Quote>{"The future is already here — it's just not very evenly distributed"}</Quote>
-              <Cite>William Gibson</Cite>
+              <Quote>{"Array(16).join('hero' - 1) + 'Batman';"}</Quote>
             </BlockQuote>
-          </Slide>
-
-          <Slide transition={slideTransition} bgColor="black">
-            <BlockQuote>
-              <Quote>{"Communities are constrained to produce designs which are copies of the communication structures of these communities"}</Quote>
-              <Cite>Melvin Conway (adapted)</Cite>
-            </BlockQuote>
-          </Slide>
-
-          <Slide transition={slideTransition} bgImage={images.npmShape} align="flex-end flex-end">
             <Text>
-              <Link textColor="tertiary" href="https://anvaka.github.io/allnpmviz3d/">allnpmviz3d by @anvaka</Link>
+              <Link textColor="tertiary" href="https://commons.wikimedia.org/wiki/File:Amoeba_(Am%C3%B6be)_01.jpg">Wikipedia (CC BY)</Link>
             </Text>
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="tertiary">
-            <Heading caps fit size={1} textColor="primary">
-              JavaScript Usage on Sites
-            </Heading>
-            <Markdown>
-          {`
-* 2011 - 38.2%
-* 2013 - 60.4%
-* 2015 - 65.0%
-* 2016 - 71.3%
-* Source: [W3Techs](http://w3techs.com/technologies/history_overview/javascript_library/all/y)
-          `}
-            </Markdown>
+          <Slide transition={slideTransition} bgImage={images.amoeba} bgDarken={0.75} bgColor="black">
+            <BlockQuote>
+              <Quote>2016 - 71.3% of sites use JavaScript</Quote>
+              <Cite>
+                <Link textColor="tertiary" href="http://w3techs.com/technologies/history_overview/javascript_library/all/y">W3Techs</Link>
+              </Cite>
+            </BlockQuote>
           </Slide>
 
           <Slide transition={slideTransition} bgColor="primary">
@@ -123,14 +107,8 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={slideTransition} bgColor="primary">
-            <Heading size={1} caps fit>
-              Technologies
-            </Heading>
-          </Slide>
-
-          <Slide transition={slideTransition} bgColor="primary">
             <Heading size={1} textColor="tertiary">
-              Job Trends I
+              Job Trends
             </Heading>
             <Layout>
               <Image src={images.jobs} padding="20px" />
@@ -138,20 +116,6 @@ export default class Presentation extends React.Component {
             <Layout>
               <Text>
                 <Link href="http://www.indeed.com/jobtrends?q=Angularjs%2C+React.js%2C+Knockout%2C+Backbone.js&l=">Indeed</Link>
-              </Text>
-            </Layout>
-          </Slide>
-
-          <Slide transition={slideTransition} bgColor="primary">
-            <Heading size={1} textColor="tertiary">
-              Job Trends II
-            </Heading>
-            <Layout>
-              <Image src={images.jobTitles} padding="20px" />
-            </Layout>
-            <Layout>
-              <Text>
-                <Link href="http://www.indeed.com/jobtrends?q=frontend%2C+backend%2C+full+stack&l=">Indeed</Link>
               </Text>
             </Layout>
           </Slide>
@@ -170,19 +134,62 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
 
+          <Slide transition={slideTransition} bgImage={images.npmShape} align="flex-end flex-end">
+            <Text>
+              <Link textColor="tertiary" href="https://anvaka.github.io/allnpmviz3d/">allnpmviz3d by @anvaka</Link>
+            </Text>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="black">
+            <BlockQuote>
+              <Quote>{"Communities are constrained to produce designs which are copies of the communication structures of these communities"}</Quote>
+              <Cite>Melvin Conway (adapted)</Cite>
+            </BlockQuote>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="black">
+            <BlockQuote>
+              <Quote>49% of 126k packages have tests</Quote>
+              <Cite>
+                <Link textColor="tertiary" href="http://nodechecker.com/">NodeChecker</Link>
+              </Cite>
+            </BlockQuote>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="black">
+            <BlockQuote>
+              <Quote>138k packages out of 231k packages have readme, license, and repository data</Quote>
+              <Cite>@scriptjs</Cite>
+            </BlockQuote>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="black">
+            <BlockQuote>
+              <Quote>106k packages out of these 138k packages have seen action within a year</Quote>
+              <Cite>@scriptjs</Cite>
+            </BlockQuote>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="black">
+            <BlockQuote>
+              <Quote>Around 30-40k packages worth using?</Quote>
+            </BlockQuote>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="black">
+            <Image src={images.dinosaurs} margin="0px auto 40px" width="100%"/>
+            <Heading size={2} caps textColor="primary" textFont="primary">
+              Packages of all shapes and sizes
+            </Heading>
+            <Text>
+              <Link href="https://en.wikipedia.org/wiki/File:Largestdinosaursbysuborder_scale.png">Wikipedia (CC BY-SA)</Link>
+            </Text>
+          </Slide>
+
           <Slide transition={slideTransition} bgImage={images.jumper} bgDarken={0.25} align="flex-end flex-end">
             <Heading size={1} caps>
               Boilerplates
             </Heading>
-          </Slide>
-
-          <Slide transition={slideTransition} bgImage={images.chain} bgDarken={0.25} align="flex-end flex-end">
-            <Heading size={1} caps fit>
-              Dependency chains
-            </Heading>
-            <Text>
-              <Link textColor="tertiary" href="https://pixabay.com/en/chain-links-connection-strength-690966/">Unsplash (PD)</Link>
-            </Text>
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.shapeSorter} bgDarken={0.25} align="flex-end flex-end">
@@ -212,10 +219,13 @@ export default class Presentation extends React.Component {
             </Text>
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="primary">
+          <Slide transition={slideTransition} bgImage={images.chain} bgDarken={0.25} align="flex-end flex-end">
             <Heading size={1} caps fit>
-              Language
+              Dependencies
             </Heading>
+            <Text>
+              <Link textColor="tertiary" href="https://pixabay.com/en/chain-links-connection-strength-690966/">Unsplash (PD)</Link>
+            </Text>
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.babel} bgDarken={0.25} align="flex-end flex-end">
@@ -224,15 +234,9 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="primary">
-            <Heading size={1} caps fit>
-              Typing
-            </Heading>
-          </Slide>
-
           <Slide transition={slideTransition} bgImage={images.cowboy} bgDarken={0.25} align="flex-end flex-end">
             <Heading size={1} caps>
-              Cowboy
+              Typing
             </Heading>
             <Text>
               <Link textColor="tertiary" href="https://pixabay.com/en/cowboy-horse-dog-pasture-western-1130695/">elijay (PD)</Link>
@@ -241,7 +245,7 @@ export default class Presentation extends React.Component {
 
           <Slide transition={slideTransition} bgImage={images.flow} bgDarken={0.25} align="flex-end flex-end">
             <Heading size={1} caps>
-              Flow
+              Flowtype
             </Heading>
             <Text>
               <Link textColor="tertiary" href="https://pixabay.com/en/honey-sweet-syrup-organic-golden-1006972/">stevepb (PD)</Link>
@@ -257,12 +261,6 @@ export default class Presentation extends React.Component {
             </Text>
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="primary">
-            <Heading size={1} caps fit>
-              The Future
-            </Heading>
-          </Slide>
-
           <Slide transition={slideTransition} bgImage={images.assembly} bgDarken={0.25} align="flex-end flex-end">
             <Heading size={1} caps>
               WebAssembly
@@ -272,26 +270,11 @@ export default class Presentation extends React.Component {
             </Text>
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
-            <CodePane
-              lang="jsx"
-              source={require("raw!../assets/deck.example")}
-              margin="20px auto"
-            />
-          </Slide>
-
-          <Slide transition={slideTransition} bgColor="tertiary">
-            <Heading caps fit size={1} textColor="primary">
-              Inline Markdown
-            </Heading>
-            <Markdown>
-              {`
-You can write inline images, [Markdown Links](http://commonmark.org), paragraph text and most other markdown syntax
-* Lists too!
-* With ~~strikethrough~~ and _italic_
-* And lets not forget **bold**
-              `}
-            </Markdown>
+          <Slide transition={slideTransition} bgColor="black">
+            <BlockQuote>
+              <Quote>{"The future is already here — it's just not very evenly distributed"}</Quote>
+              <Cite>William Gibson</Cite>
+            </BlockQuote>
           </Slide>
 
           <Slide transition={slideTransition} bgColor="primary">
@@ -302,7 +285,7 @@ You can write inline images, [Markdown Links](http://commonmark.org), paragraph 
 
           <Slide transition={slideTransition} bgColor="tertiary">
             <Heading size={1} caps fit textColor="primary">
-              Made with sisu in Finland by
+              Made in Finland by
             </Heading>
             <Link href="https://twitter.com/bebraw">
               <Heading caps fit size={2} textColor="secondary">
