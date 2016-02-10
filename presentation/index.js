@@ -28,7 +28,7 @@ import createTheme from "spectacle/lib/themes/default";
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
-const slideTransition = ["spin", "zoom"];
+const slideTransition = ["slide"];
 const images = {
   assembly: require("../assets/assembly.jpg").replace("/", ""),
   babel: require("../assets/babel.jpg").replace("/", ""),
