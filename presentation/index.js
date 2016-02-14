@@ -6,7 +6,6 @@ import {
   Appear,
   BlockQuote,
   Cite,
-  CodePane,
   Deck,
   Heading,
   Image,
