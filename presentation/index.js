@@ -3,6 +3,7 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
+  Appear,
   BlockQuote,
   Cite,
   CodePane,
@@ -11,6 +12,8 @@ import {
   Image,
   Layout,
   Link,
+  List,
+  ListItem,
   Markdown,
   Quote,
   Slide,
@@ -27,6 +30,7 @@ import createTheme from "spectacle/lib/themes/default";
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
+require("./custom.css");
 
 const slideTransition = ["slide"];
 const images = {
@@ -39,6 +43,7 @@ const images = {
   eich: require("../assets/eich.jpg").replace("/", ""),
   enterprise: require("../assets/enterprise.jpg").replace("/", ""),
   flow: require("../assets/flow.jpg").replace("/", ""),
+  guruMeditation: require("../assets/guru_meditation.png").replace("/", ""),
   jumper: require("../assets/jumper.jpg").replace("/", ""),
   jobs: require("../assets/jobs.png").replace("/", ""),
   legos: require("../assets/legos.jpg").replace("/", ""),
@@ -48,6 +53,7 @@ const images = {
   shapeSorter: require("../assets/shape_sorter.jpg").replace("/", ""),
   survivejs: require("../assets/survivejs.png").replace("/", ""),
   tools: require("../assets/tools.jpg").replace("/", ""),
+  troll: require("../assets/troll.png").replace("/", ""),
   types: require("../assets/types.jpg").replace("/", ""),
   unique: require("../assets/unique.png").replace("/", "")
 };
@@ -83,7 +89,7 @@ export default class Presentation extends React.Component {
             <BlockQuote>
               <Quote>2016 - 71.3% of sites use JavaScript</Quote>
               <Cite>
-                <Link textColor="tertiary" href="http://w3techs.com/technologies/history_overview/javascript_library/all/y">W3Techs</Link>
+                <Link href="http://w3techs.com/technologies/history_overview/javascript_library/all/y">W3Techs</Link>
               </Cite>
             </BlockQuote>
           </Slide>
@@ -132,7 +138,7 @@ export default class Presentation extends React.Component {
             <BlockQuote>
               <Quote>49% of 126k packages have tests</Quote>
               <Cite>
-                <Link textColor="tertiary" href="http://nodechecker.com/">NodeChecker</Link>
+                <Link href="http://nodechecker.com/">NodeChecker</Link>
               </Cite>
             </BlockQuote>
           </Slide>
@@ -151,10 +157,28 @@ export default class Presentation extends React.Component {
             </BlockQuote>
           </Slide>
 
+          <Slide transition={slideTransition} bgImage={images.troll} bgDarken={0.85}>
+            <Heading size={1} caps fit textColor="primary">
+              FUD for Thought
+            </Heading>
+            <List textColor="primary">
+              <Appear><ListItem>Around 30-40k packages worth using?</ListItem></Appear>
+              <Appear><ListItem>Quantity over quality?</ListItem></Appear>
+              <Appear><ListItem>Too easy to publish?</ListItem></Appear>
+              <Appear><ListItem>The need for curation</ListItem></Appear>
+              <Appear><ListItem>
+                <Link href="https://nodesecurity.io/">Node Security Project</Link>
+              </ListItem></Appear>
+              <Appear><ListItem>Single mirror by <Link href="http://cnpmjs.org/">cnpm</Link></ListItem></Appear>
+              <Appear><ListItem>Single point of failure managed by a single company</ListItem></Appear>
+              <Appear><ListItem>
+                <Link href="https://github.com/nodejs/node/issues/3959">Potential licensing issues with Node</Link>
+              </ListItem></Appear>
+            </List>
+          </Slide>
+
           <Slide transition={slideTransition} bgColor="black">
-            <BlockQuote>
-              <Quote>Around 30-40k packages worth using?</Quote>
-            </BlockQuote>
+            <Image src={images.guruMeditation} margin="0px auto 40px" height="219px"/>
           </Slide>
 
           <Slide transition={slideTransition} bgColor="black">
@@ -201,28 +225,43 @@ export default class Presentation extends React.Component {
             </BlockQuote>
           </Slide>
 
+          <Slide transition={slideTransition} bgImage={images.troll} bgDarken={0.85}>
+            <Heading size={1} caps fit textColor="primary">
+              FUD for Thought
+            </Heading>
+            <List textColor="primary">
+              <Appear><ListItem>Rather than collaborating, we rather do our own thing?</ListItem></Appear>
+              <Appear><ListItem>Peak boilerplate? Solve the right problems</ListItem></Appear>
+              <Appear><ListItem>Sustainability of solutions (single points of failures, bus factor)</ListItem></Appear>
+              <Appear><ListItem>Lifetime of packages keeps decreasing?</ListItem></Appear>
+              <Appear><ListItem>The need for standardization and common ground</ListItem></Appear>
+            </List>
+          </Slide>
+
           <Slide transition={slideTransition} bgImage={images.tools} bgDarken={0.25}>
             <iframe width="840" height="630" src="https://www.youtube.com/embed/Y7XW-mewUm8" frameborder="0" allowfullscreen></iframe>
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.npmShape} align="flex-end flex-end">
-            <Heading size={1} caps fit>
-              Dependencies
-            </Heading>
+            <Layout>
+              <Text>
+                <Link href="https://anvaka.github.io/allnpmviz3d/">allnpmviz3d by @anvaka</Link>
+              </Text>
+            </Layout>
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.babel} bgDarken={0.75} bgColor="tertiary" textColor="primary">
             <Heading caps fit size={1} textColor="primary">
               ECMAScript
             </Heading>
-            <Markdown>
-              {`
-* ES5 - 2009
-* ES6/ES2015 - 20+ new features
-* ES7/ES2016 - **Array.prototype.include**, **\*\***
-* [Current proposals](https://github.com/tc39/ecma262)
-              `}
-            </Markdown>
+            <List textColor="primary">
+              <Appear><ListItem>ES5 - 2009</ListItem></Appear>
+              <Appear><ListItem>ES6/ES2015 - 20+ new features</ListItem></Appear>
+              <Appear><ListItem>ES7/ES2016 - Array.prototype.include, **</ListItem></Appear>
+              <Appear><ListItem>
+                <Link href="https://github.com/tc39/ecma262">Current proposals</Link>
+              </ListItem></Appear>
+            </List>
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.cowboy} bgDarken={0.75} bgColor="black">
@@ -256,6 +295,18 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
+          <Slide transition={slideTransition} bgImage={images.troll} bgDarken={0.85}>
+            <Heading size={1} caps fit textColor="primary">
+              FUD for Thought
+            </Heading>
+            <List textColor="primary">
+              <Appear><ListItem>Transpiling leads to fragmentation?</ListItem></Appear>
+              <Appear><ListItem>Enterprise interests vs. community interests</ListItem></Appear>
+              <Appear><ListItem>Hype driven, backed by big companies, juxtaposing</ListItem></Appear>
+              <Appear><ListItem>The need for standardization and common ground</ListItem></Appear>
+            </List>
+          </Slide>
+
           <Slide transition={slideTransition} bgColor="black">
             <BlockQuote>
               <Quote>{"The future is already here — it's just not very evenly distributed"}</Quote>
@@ -287,8 +338,8 @@ export default class Presentation extends React.Component {
             </Link>
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="tertiary" textColor="primary">
-            <Heading caps fit size={1} textColor="primary">
+          <Slide transition={slideTransition} textColor="primary">
+            <Heading caps fit size={1} textColor="secondary">
               Image Credits
             </Heading>
             <Markdown>
@@ -296,9 +347,9 @@ export default class Presentation extends React.Component {
 * [Wikipedia (CC BY-SA)](https://en.wikipedia.org/wiki/Brendan_Eich#/media/File:Brendan_Eich_Mozilla_Foundation_official_photo.jpg), [Wikipedia (CC BY-SA)](https://en.wikipedia.org/wiki/File:Largestdinosaursbysuborder_scale.png)
 * [Andy (CC BY)](https://www.flickr.com/photos/ellasdad/425813314), [Meghana Kulkarni (CC BY-NC)](https://www.flickr.com/photos/17178266@N00/4334202250/)
 * [estefania17 (PD)](https://pixabay.com/en/lego-blocks-bricks-toy-game-252602/), [Kae (PD)](https://commons.wikimedia.org/wiki/File:Componentes.JPG)
-* [allnpmviz3d by @anvaka](https://anvaka.github.io/allnpmviz3d/), [elijay (PD)](https://pixabay.com/en/cowboy-horse-dog-pasture-western-1130695/)
-* [skeeze (PD)](https://pixabay.com/en/leonard-nimoy-william-shatner-393861/), [stevepb (PD)](https://pixabay.com/en/honey-sweet-syrup-organic-golden-1006972/)
-* [Unsplash (PD)](https://pixabay.com/en/typewriter-book-notebook-paper-801921/), [Efraimstochter (PD)](https://pixabay.com/en/wheels-machine-installation-art-784865/)
+* [elijay (PD)](https://pixabay.com/en/cowboy-horse-dog-pasture-western-1130695/), [skeeze (PD)](https://pixabay.com/en/leonard-nimoy-william-shatner-393861/)
+* [stevepb (PD)](https://pixabay.com/en/honey-sweet-syrup-organic-golden-1006972/), [Unsplash (PD)](https://pixabay.com/en/typewriter-book-notebook-paper-801921/)
+* [Efraimstochter (PD)](https://pixabay.com/en/wheels-machine-installation-art-784865/)
               `}
             </Markdown>
           </Slide>
