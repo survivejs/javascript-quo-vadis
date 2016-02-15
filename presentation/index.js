@@ -166,7 +166,7 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Too easy to publish?</ListItem></Appear>
               <Appear><ListItem>The need for curation</ListItem></Appear>
               <Appear><ListItem>
-                <Link href="https://nodesecurity.io/">Node Security Project</Link>
+                <Link href="https://nodesecurity.io/">Node Security Project</Link> - Where is Node Quality Project?
               </ListItem></Appear>
               <Appear><ListItem>Single mirror by <Link href="http://cnpmjs.org/">cnpm</Link></ListItem></Appear>
               <Appear><ListItem>Single point of failure managed by a single company</ListItem></Appear>
@@ -229,7 +229,7 @@ export default class Presentation extends React.Component {
               FUD for Thought
             </Heading>
             <List textColor="primary">
-              <Appear><ListItem>Rather than collaborating, we rather do our own thing?</ListItem></Appear>
+              <Appear><ListItem>Instead of collaborating, we rather do our own thing?</ListItem></Appear>
               <Appear><ListItem>Peak boilerplate? Solve the right problems</ListItem></Appear>
               <Appear><ListItem>Sustainability of solutions (single points of failures, bus factor)</ListItem></Appear>
               <Appear><ListItem>Lifetime of packages keeps decreasing?</ListItem></Appear>
@@ -313,7 +313,7 @@ export default class Presentation extends React.Component {
             </BlockQuote>
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="primary">
+          <Slide transition={slideTransition} bgImage={images.troll} bgDarken={0.85}>
             <Heading caps fit size={1} textColor="tertiary">
               Questions?
             </Heading>
@@ -321,9 +321,9 @@ export default class Presentation extends React.Component {
 
           <Slide transition={slideTransition} bgColor="white" notes="">
             <Heading size={1} textColor="primary">
-              SurviveJS
+              SurviveJS 2.0
             </Heading>
-            <Image src={images.survivejs} margin="0px auto 40px" height="566px"/>
+            <Image src={images.survivejs} margin="0px auto 40px" height="524px"/>
           </Slide>
 
           <Slide transition={slideTransition} bgColor="tertiary">
