@@ -256,7 +256,7 @@ export default class Presentation extends React.Component {
             <List textColor="primary">
               <Appear><ListItem>ES5 - 2009</ListItem></Appear>
               <Appear><ListItem>ES6/ES2015 - 20+ new features</ListItem></Appear>
-              <Appear><ListItem>ES7/ES2016 - Array.prototype.include, **</ListItem></Appear>
+              <Appear><ListItem>ES7/ES2016 - Array.prototype.includes, **</ListItem></Appear>
               <Appear><ListItem>
                 <Link href="https://github.com/tc39/ecma262">Current proposals</Link>
               </ListItem></Appear>
