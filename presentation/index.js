@@ -48,7 +48,8 @@ const images = {
   legos: require("../assets/legos.jpg").replace("/", ""),
   npmShape: require("../assets/npm_shape.png").replace("/", ""),
   moduleCounts: require("../assets/module_counts.png").replace("/", ""),
-  redmonk: require("../assets/redmonk.png").replace("/", ""),
+  redmonk2015: require("../assets/redmonk.png").replace("/", ""),
+  redmonk2019: require("../assets/redmonk-2019.png").replace("/", ""),
   shapeSorter: require("../assets/shape_sorter.jpg").replace("/", ""),
   survivejs: require("../assets/survivejs.png").replace("/", ""),
   tools: require("../assets/tools.jpg").replace("/", ""),
@@ -69,7 +70,7 @@ export default class Presentation extends React.Component {
       <Spectacle theme={theme}>
         <Deck transition={slideTransition} transitionDuration={500}>
           <Slide transition={slideTransition} bgColor="primary">
-            <Heading size={1} fit caps lineHeight={1} textColor="black">
+            <Heading size={1} fit lineHeight={1} textColor="black">
               JavaScript
             </Heading>
             <Heading size={2} textColor="white">
@@ -86,7 +87,16 @@ export default class Presentation extends React.Component {
 
           <Slide transition={slideTransition} bgColor="black">
             <BlockQuote>
-              <Quote>2016 - 71.3% of sites use JavaScript</Quote>
+              <Quote>2011, 38.2% of sites use JavaScript</Quote>
+              <Cite>
+                <Link href="http://w3techs.com/technologies/history_overview/javascript_library/all/y">W3Techs</Link>
+              </Cite>
+            </BlockQuote>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="black">
+            <BlockQuote>
+              <Quote>2019 - 75.9% of sites use JavaScript</Quote>
               <Cite>
                 <Link href="http://w3techs.com/technologies/history_overview/javascript_library/all/y">W3Techs</Link>
               </Cite>
@@ -96,7 +106,15 @@ export default class Presentation extends React.Component {
           <Slide transition={slideTransition} bgColor="primary">
             <Layout>
               <Link href="http://redmonk.com/jgovernor/2015/07/31/programming-language-rankings-summer-2015/">
-                <Image src={images.redmonk} />
+                <Image src={images.redmonk2015} />
+              </Link>
+            </Layout>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="primary">
+            <Layout>
+              <Link href="https://redmonk.com/sogrady/2019/03/20/language-rankings-1-19/">
+                <Image src={images.redmonk2019} />
               </Link>
             </Layout>
           </Slide>
@@ -129,62 +147,16 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
 
+          <Slide transition={slideTransition} bgImage={images.npmShape} align="flex-end flex-end">
+            <Layout>
+              <Text>
+                <Link href="https://anvaka.github.io/allnpmviz3d/">allnpmviz3d by @anvaka</Link>
+              </Text>
+            </Layout>
+          </Slide>
+
           <Slide transition={slideTransition} bgColor="black">
             <Image src={images.unique} margin="0px auto 40px" width="100%"/>
-          </Slide>
-
-          <Slide transition={slideTransition} bgColor="black">
-            <BlockQuote>
-              <Quote>49% of 126k packages have tests</Quote>
-              <Cite>
-                <Link href="http://nodechecker.com/">NodeChecker</Link>
-              </Cite>
-            </BlockQuote>
-          </Slide>
-
-          <Slide transition={slideTransition} bgColor="black">
-            <BlockQuote>
-              <Quote>138k packages out of 231k have readme, license, and repository data</Quote>
-              <Cite>@scriptjs</Cite>
-            </BlockQuote>
-          </Slide>
-
-          <Slide transition={slideTransition} bgColor="black">
-            <BlockQuote>
-              <Quote>106k packages out of these 138k have seen action within a year</Quote>
-              <Cite>@scriptjs</Cite>
-            </BlockQuote>
-          </Slide>
-
-          <Slide transition={slideTransition} bgImage={images.troll} bgDarken={0.85}>
-            <Heading size={1} caps fit textColor="primary">
-              FUD for Thought
-            </Heading>
-            <List textColor="primary">
-              <Appear><ListItem>Around 30-40k packages worth using?</ListItem></Appear>
-              <Appear><ListItem>Quantity over quality?</ListItem></Appear>
-              <Appear><ListItem>Too easy to publish?</ListItem></Appear>
-              <Appear><ListItem>The need for curation</ListItem></Appear>
-              <Appear><ListItem>
-                <Link href="https://nodesecurity.io/">Node Security Project</Link> - Where is Node Quality Project?
-              </ListItem></Appear>
-              <Appear><ListItem>Single mirror by <Link href="http://cnpmjs.org/">cnpm</Link></ListItem></Appear>
-              <Appear><ListItem>Single point of failure managed by a single company</ListItem></Appear>
-              <Appear><ListItem>
-                <Link href="https://github.com/nodejs/node/issues/3959">Potential licensing issues with Node</Link>
-              </ListItem></Appear>
-            </List>
-          </Slide>
-
-          <Slide transition={slideTransition} bgColor="black">
-            <Image src={images.guruMeditation} margin="0px auto 40px" height="219px"/>
-          </Slide>
-
-          <Slide transition={slideTransition} bgColor="black">
-            <BlockQuote>
-              <Quote>{"Communities are constrained to produce designs which are copies of the communication structures of these communities"}</Quote>
-              <Cite>Melvin Conway (adapted)</Cite>
-            </BlockQuote>
           </Slide>
 
           <Slide transition={slideTransition} bgColor="black">
@@ -196,31 +168,46 @@ export default class Presentation extends React.Component {
 
           <Slide transition={slideTransition} bgImage={images.jumper} bgDarken={0.75} bgColor="black">
             <BlockQuote>
-              <Quote>2669 results for ‘boilerplate’</Quote>
+              <Quote>5146 results for ‘boilerplate’</Quote>
             </BlockQuote>
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.shapeSorter} bgDarken={0.75} bgColor="black">
             <BlockQuote>
-              <Quote>12263 results for ‘framework’</Quote>
+              <Quote>23592 results for ‘framework’</Quote>
             </BlockQuote>
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.tools} bgDarken={0.75}>
             <BlockQuote>
-              <Quote>1067 results for ‘toolkit’</Quote>
+              <Quote>2878 results for ‘toolkit’</Quote>
             </BlockQuote>
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.legos} bgDarken={0.75}>
             <BlockQuote>
-              <Quote>30187 results for ‘library’</Quote>
+              <Quote>51697 results for ‘library’</Quote>
             </BlockQuote>
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.components} bgDarken={0.75}>
             <BlockQuote>
-              <Quote>13711 results for ‘component’</Quote>
+              <Quote>74119 results for ‘component’</Quote>
+            </BlockQuote>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="black">
+            <BlockQuote>
+              <Quote>How many of these packages can be considered mature?</Quote>
+            </BlockQuote>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="black">
+            <BlockQuote>
+              <Quote>Based on Futurice, about one third (2014). Maybe less now?</Quote>
+              <Cite>
+                <Link href="https://www.futurice.com/blog/npm-registry-in-numbers/">Futurice</Link>
+              </Cite>
             </BlockQuote>
           </Slide>
 
@@ -230,23 +217,75 @@ export default class Presentation extends React.Component {
             </Heading>
             <List textColor="primary">
               <Appear><ListItem>Instead of collaborating, we rather do our own thing?</ListItem></Appear>
-              <Appear><ListItem>Peak boilerplate? Solve the right problems</ListItem></Appear>
-              <Appear><ListItem>Sustainability of solutions (single points of failures, bus factor)</ListItem></Appear>
+              <Appear><ListItem>Have we reached peak boilerplate?</ListItem></Appear>
               <Appear><ListItem>Lifetime of packages keeps decreasing?</ListItem></Appear>
+              <Appear><ListItem>How many of the packages can be considered sustainable (no bus factor of one)?</ListItem></Appear>
               <Appear><ListItem>The need for standardization and common ground</ListItem></Appear>
             </List>
           </Slide>
 
-          <Slide transition={slideTransition} bgImage={images.tools} bgDarken={0.25}>
-            <iframe width="840" height="630" src="https://www.youtube.com/embed/Y7XW-mewUm8" frameborder="0" allowfullscreen></iframe>
+          <Slide transition={slideTransition} bgColor="black">
+            <BlockQuote>
+              <Quote>49% of 126k packages have tests</Quote>
+              <Cite>
+                NodeChecker (defunct, 2016)
+              </Cite>
+            </BlockQuote>
           </Slide>
 
-          <Slide transition={slideTransition} bgImage={images.npmShape} align="flex-end flex-end">
-            <Layout>
-              <Text>
-                <Link href="https://anvaka.github.io/allnpmviz3d/">allnpmviz3d by @anvaka</Link>
-              </Text>
-            </Layout>
+          <Slide transition={slideTransition} bgColor="black">
+            <BlockQuote>
+              <Quote>138k packages out of 231k have readme, license, and repository data</Quote>
+              <Cite>@scriptjs, 2016</Cite>
+            </BlockQuote>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="black">
+            <BlockQuote>
+              <Quote>106k packages out of these 138k have seen action within a year</Quote>
+              <Cite>@scriptjs, 2016</Cite>
+            </BlockQuote>
+          </Slide>
+
+          <Slide transition={slideTransition} bgImage={images.troll} bgDarken={0.85}>
+            <Heading size={1} caps fit textColor="primary">
+              FUD for Thought
+            </Heading>
+            <List textColor="primary">
+              <Appear><ListItem>Around 100-300k packages worth using?</ListItem></Appear>
+              <Appear><ListItem>Quantity over quality?</ListItem></Appear>
+              <Appear><ListItem>Too easy to publish?</ListItem></Appear>
+              <Appear><ListItem>
+                Node Security Project (bought by npm) - Where is Node Quality Project?
+              </ListItem></Appear>
+              <Appear><ListItem>
+                <Link href="https://github.com/nodejs/node/issues/3959">Potential licensing issues with Node</Link>
+              </ListItem></Appear>
+              <Appear><ListItem>Single point of failure managed by a single company</ListItem></Appear>
+            </List>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="black">
+            <Image src={images.guruMeditation} margin="0px auto 40px" height="219px"/>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="black">
+            <Heading size={1} caps fit textColor="primary">
+              Upcoming Alternative Registries
+            </Heading>
+            <List textColor="primary">
+              <Appear><ListItem>Mirrors by <Link href="http://cnpmjs.org/">cnpm</Link> and <Link href="https://open-registry.dev">Open-Registry</Link></ListItem></Appear>
+              <Appear><ListItem><Link href="https://about.gitlab.com/2019/05/10/github-adds-package-registry/">GitLab Package Registry</Link></ListItem></Appear>
+              <Appear><ListItem><Link href="https://github.com/features/package-registry">GitHub Package Registry</Link></ListItem></Appear>
+              <Appear><ListItem><Link href="https://github.com/entropic-dev/entropic">Entropic</Link></ListItem></Appear>
+            </List>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="black">
+            <BlockQuote>
+              <Quote>{"Communities are constrained to produce designs which are copies of the communication structures of these communities"}</Quote>
+              <Cite>Melvin Conway (adapted)</Cite>
+            </BlockQuote>
           </Slide>
 
           <Slide transition={slideTransition} bgImage={images.babel} bgDarken={0.75} bgColor="tertiary" textColor="primary">
@@ -257,6 +296,7 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>ES5 - 2009</ListItem></Appear>
               <Appear><ListItem>ES6/ES2015 - 20+ new features</ListItem></Appear>
               <Appear><ListItem>ES7/ES2016 - Array.prototype.includes, **</ListItem></Appear>
+              <Appear><ListItem>ES7/ES2017-ES2019 - Too many features to mention</ListItem></Appear>
               <Appear><ListItem>
                 <Link href="https://github.com/tc39/ecma262">Current proposals</Link>
               </ListItem></Appear>
@@ -313,28 +353,25 @@ export default class Presentation extends React.Component {
             </BlockQuote>
           </Slide>
 
+          <Slide transition={slideTransition} bgImage={images.tools} bgDarken={0.25}>
+            <iframe width="840" height="630" src="https://www.youtube.com/embed/Y7XW-mewUm8" frameborder="0" allowfullscreen></iframe>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading fit size={2} textColor="secondary">
+              Juho Vepsäläinen
+            </Heading>
+            <Link href="https://twitter.com/survivejs">
+              <Heading size={2} textColor="primary">
+                @SurviveJS
+              </Heading>
+            </Link>
+          </Slide>
+
           <Slide transition={slideTransition} bgImage={images.troll} bgDarken={0.85}>
             <Heading caps fit size={1} textColor="tertiary">
               Questions?
             </Heading>
-          </Slide>
-
-          <Slide transition={slideTransition} bgColor="white" notes="">
-            <Heading size={1} textColor="primary">
-              SurviveJS 2.0
-            </Heading>
-            <Image src={images.survivejs} margin="0px auto 40px" height="524px"/>
-          </Slide>
-
-          <Slide transition={slideTransition} bgColor="tertiary">
-            <Heading size={1} caps fit textColor="primary">
-              Made in Finland by
-            </Heading>
-            <Link href="https://twitter.com/bebraw">
-              <Heading caps fit size={2} textColor="secondary">
-                Juho Vepsäläinen
-              </Heading>
-            </Link>
           </Slide>
 
           <Slide transition={slideTransition} textColor="primary">
